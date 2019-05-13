@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import * as serviceWorker from './serviceWorker';
-import Welcome from "./ClassComponent";
+import ComposingComponents from './ComposingComponents'
 
-ReactDOM.render(<Welcome name="Bozlur Rahman"></Welcome>,document.getElementById('root'));
+ReactDOM.render(<ComposingComponents/>,document.getElementById('root'));
 
 serviceWorker.unregister();
