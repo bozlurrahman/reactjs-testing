@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clock from './Clock';
 
-function App() {
+function ActionLink() {
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('The link was clicked.');
+    }
+
     return (
-        <div>
-            <Clock></Clock>
-            <Clock></Clock>
-            <Clock></Clock>
-        </div>
-    )
+        <a href="#" onClick={handleClick}>
+            Click me
+      </a>
+    );
 }
 
 ReactDOM.render(
-    <App />,
+    <ActionLink />,
     document.getElementById('root')
 );
