@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Toggle from './Toggle';
+import LoginControl from './LoginControl';
 
 ReactDOM.render(
-    <Toggle />,
+    <LoginControl />,
     document.getElementById('root')
 );
