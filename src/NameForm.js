@@ -1,11 +1,13 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 
 class NameForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             name: '',
-            essay: 'Please write an essay about your favorite DOM element.'
+            essay: 'Please write an essay about your favorite DOM element.',
+            selectedItems: ['lime', 'mango']
         };
 
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -21,13 +23,20 @@ class NameForm extends React.Component {
         this.setState({ essay: event.target.value });
     }
     handleSelectChange(event) {
-        this.setState({ select: event.target.value });
+        
+        let selected = [...this.refs.fruitsList]
+                    .filter(option => option.selected)
+                    .map(option => option.value)
+        
+        this.setState({ selectedItems: selected });
+        console.log(selected);
+
     }
 
     handleSubmit(event) {
         console.log(this.state.name);
         console.log(this.state.essay);
-        console.log(this.state.select);
+        console.log(this.state.selectedItems);
         event.preventDefault();
     }
 
@@ -38,7 +47,7 @@ class NameForm extends React.Component {
                 <label>Essay: <textarea value={this.state.essay} onChange={this.handleEssayChange} rows="6" cols="30" /></label><br /><br />
                 <label>
                     Pick your favorite flavor:
-                    <select value={this.state.select} onChange={this.handleSelectChange}>
+                    <select value={this.state.selectedItems} onChange={this.handleSelectChange} multiple={true} ref="fruitsList">
                         <option value="grapefruit">Grapefruit</option>
                         <option value="lime">Lime</option>
                         <option value="coconut">Coconut</option>
