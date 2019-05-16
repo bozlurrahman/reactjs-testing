@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NameForm from './NameForm';
+import Calculator from './TempCalc';
 
 
 
 ReactDOM.render(
-    <NameForm />,
+    <Calculator />,
     document.getElementById('root')
 );
