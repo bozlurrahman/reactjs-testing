@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SignUpDialog from './SignUpDialog';
+import Button from './Button';
+
 
 ReactDOM.render(
-    <SignUpDialog />,
+    <Button />,
     document.getElementById('root')
 );
+
