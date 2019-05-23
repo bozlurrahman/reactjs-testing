@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './Button';
+import Splitting from './Splitting';
 import './scss/scss1.scss';
 
 ReactDOM.render(
-    <Button />,
+    <Splitting />,
     document.getElementById('root')
 );
 
