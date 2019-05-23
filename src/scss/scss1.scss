@@ -1,3 +1,7 @@
-body {
-    background-color: rgb(170, 168, 168);
-}
+// Override default variables before the import
+$body-bg: #000;
+
+// You must prefix imports from node_modules with ~ as displayed above.
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
